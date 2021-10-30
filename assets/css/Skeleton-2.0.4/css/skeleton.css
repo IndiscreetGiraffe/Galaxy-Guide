@@ -288,6 +288,12 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
+/* card */
+
+#planet-card {
+  border-style: solid;
+  border-color: #888;
+}
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
