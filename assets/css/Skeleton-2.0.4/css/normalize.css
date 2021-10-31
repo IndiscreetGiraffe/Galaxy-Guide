@@ -22,7 +22,8 @@ html {
 }
 body {
   margin: 0;
-  background-color: rgb(83, 83, 83);
+  background-color: black;
+  
 }
 /* basic header styles */
 header {
@@ -61,10 +62,34 @@ header nav ul li a {
 /* section styles */
 section {
   padding: 60px;
+  background-color:rgb(139, 138, 138);
 } 
+
+ .hero {
+  font-family: sans-serif;
+  margin: 0 auto;
+  perspective: 380px;
+  perspective-origin: bottom;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+  transform: scaleY(0.9);
+  color: #1EAEDB;
+  background: border-box;
+  
+}
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
 
 button {
   background-image: url(../images/istockphoto-1287901429-170667a.jpeg);
+  color: #1EAEDB;
 }
  
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {

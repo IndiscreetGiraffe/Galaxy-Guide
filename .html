@@ -27,6 +27,10 @@
                 </ul>
             </nav>
         </header>
+        <section class="hero">
+            <h2>We bring the galaxies to you, so they don't seem so far far away...</h2>
+            
+        </section>
 
         <section id="about-us">
             <h2>About Us</h2>
@@ -38,13 +42,16 @@
         <section id="find-a-planet">
             <h2>Find a Planet</h2>
             <div class="planet-search">
-                <input type="text" placeholder="Find a planet!" />
-                <button type="submit">Guide Me</button>
+                <input type="text" id="planet" placeholder="Find a planet!" />
+                <button id="first" type="submit">Guide Me</button>
             </div>
             <div class="random-planet">
              <h2>OR</h2>
-                <button type="submit">Find one for me</button>
+                <button id="second" type="submit">Find one for me</button>
             </div>
+        </section>
+        <section id="planet-card">
+            <h1 id="planet-name"></h1>
         </section>
 
         <section id="reach-out">
@@ -58,7 +65,7 @@
         </section>
 
         <footer>
-        
+            <script src="./assets/java/index.js"></script>
         </footer>
     </body>
 </html>
