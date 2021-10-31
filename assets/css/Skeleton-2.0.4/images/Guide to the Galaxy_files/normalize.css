@@ -22,6 +22,8 @@ html {
 }
 body {
   margin: 0;
+  background-color: black;
+  
 }
 /* basic header styles */
 header {
@@ -61,62 +63,63 @@ header nav ul li a {
 section {
   padding: 60px;
   background-color:rgb(139, 138, 138);
-  text-align: center;
 } 
 
- 
-.hero {
-  background-color: black;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero-text {
+ .hero {
+  font-family: sans-serif;
+  margin: 0 auto;
+  perspective: 380px;
+  perspective-origin: bottom;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+  transform: scaleY(0.9);
   color: #1EAEDB;
-  text-align: center;
-  padding-top: 75px;
+  background: border-box;
+  
 }
-
-#about-us h2 {
-  border-bottom: 3px solid;
-}
-
-#about-us div {
+h2 {
+  font-size: 2.5rem;
   text-align: center;
 }
 
 
-/* button styles*/
+
 button {
   background-image: url(../images/istockphoto-1287901429-170667a.jpeg);
+  color: #1EAEDB;
 }
  #first, #second {
-   color: #1EAEDB; 
- }
- #find-a-planet div {
-  text-align: center;
+   color: #1EAEDB;
+   
  }
 
 
 /* footer styles */
 footer {
-background-color: black ;
+background-image: url(../images/istockphoto-1287901429-170667a.jpeg);
 width: 100%;
 padding: 40px 35px;
-height: 200px;
-background-size: cover;
+height: 250px;
 background-position: center;
+position: relative;
 }
 
 /*contact section */
 .contact {
   text-align: center;
+  background: #024e76;
 }
 
 .contact h2 {
-  color: #1EAEDB;
+  color: #fce138;
+}
+
+.contact-info iframe {
+  width: 400px;
+  height: 400px;
 }
 
 .contact-info div {
@@ -127,53 +130,22 @@ background-position: center;
   margin: 30px 0 0 60px;
   color: white;
 }
-.contact h2 {
-  margin-bottom: 35px;
-  border-bottom: 3px solid ;
-  border-color: #1EAEDB;
 
-}
-.contact-info h4 {
-  color: #1EAEDB;
-  font-size: 22px;
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
 }
 
-.contact-info p {
+.contact-info p, .contact-info address {
   margin: 20px 0;
   line-height: 1.5;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
-  color:#1EAEDB;
 }
 
 .contact-info a {
-  color: #1EAEDB; 
+  color: #fce138; 
 }
-
-footer {
-  background-color: black;
-  width: 100%;
-  padding: 40px 35px;
-}
-
-footer h2 {
-    display: inline;
-    color: #1EAEDB;
-    font-size: 30px;
-    margin: 0;
-}
-
-footer div {
-    
-    line-height: 1.5;
-    text-align: center;
-}
-
-footer a {
-    color:#1EAEDB ;
-}
-
-
 
 
 
