@@ -4,7 +4,8 @@ var searchText= document.getElementById("planet");
 var planetName= document.getElementById('planet-name')
 
 
-function check() {
+function check(e) {
+    e.preventDefault();
     var planetSearch = searchText.value;
     searchText.value = "";
     fetch(`https://api.le-systeme-solaire.net/rest/bodies/${planetSearch}`)
@@ -17,10 +18,9 @@ function check() {
         document.getElementById("moons").innerHTML = ""
         
         planetName.innerHTML = "Planet Name: " + data.name
-
         document.getElementById("aphelion").innerHTML = "Aphelion: " + data.aphelion
         document.getElementById("mass").innerHTML += "mass: " + data.mass.massValue
-        document.getElementById("mass").innerHTML += " mass exponent " + data.mass.massExponent
+        document.getElementById("mass").innerHTML += " mass exponent: " + data.mass.massExponent
         document.getElementById("moons").innerText = "Moons"
         document.getElementById("argPeriapsis").innerHTML = "Arg Perispsis: " + data.argPeriapsis
         document.getElementById("aroundPlanet").innerHTML = "Around Planet: " + data.aroundPlanet
@@ -39,8 +39,40 @@ function check() {
         document.getElementById("longAscNode").innerHTML = "Long Asc Node: " + data.longAscNode
         document.getElementById("mainAnomaly").innerHTML = "Main Anomaly: " + data.mainAnomaly
         document.getElementById("meanRadius").innerHTML = "Mean Radius: " + data.meanRadius
-        
+     /*   
+        for (let planet in data) {
+            console.log(planet)
+            if (!data[planet]){
+                continue;
+            }
+            if (Array.isArray(data[planet])){
+            
+                for (let index = 0; index < data[planet].length; index++) {
+                var moonName = data[planet][index].moon;
+                console.log(moonName)
+                document.getElementById("moons").innerHTML+= "<li>" + moonName + "</li>"
+                }  
+            } else if (typeof data[planet]==="object") {
+                if (document.getElementById(planet)){
 
+                    document.getElementById(planet).innerHTML= "mass: " + data[planet].massValue+" mass exponent: " + data[planet].massExponent
+ 
+               }
+
+            } else {
+            
+            
+                if (document.getElementById(planet)){
+                 document.getElementById(planet).innerHTML+= data[planet]
+                }
+            }
+        }
+      */  
+        
+        
+        
+        
+        
         for (let index = 0; index < data.moons.length; index++) {
             var moonName = data.moons[index].moon;
             document.getElementById("moons").innerHTML+= "<li>" + moonName + "</li>"
